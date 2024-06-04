@@ -23,3 +23,5 @@ as "$1" -o "$obj_file_name"
 ld -o "$exec_file_name" "$obj_file_name" \
   -lSystem -syslibroot "$(xcrun -sdk macosx --show-sdk-path)"
 
+./$exec_file_name
+echo $?

@@ -7,3 +7,8 @@ https://youtu.be/3ixTKrE8lv8?si=ooLFKNIOOcsNabxw
 
 System calls reference
 https://syscalls.w3challs.com/?arch=arm_strong
+
+
+https://github.com/meownoid/arm-code-examples.git
+
+https://github.com/jdshaffer/Apple-Silicon-ASM-Examples.git
