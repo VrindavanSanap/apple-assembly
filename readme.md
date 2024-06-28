@@ -1,5 +1,8 @@
 Teaching myself Apple silicon assembly
 
+
+
+
 References:
 
 Intro to 64 bit ARM Assembly: From Basics to Party Tricks
