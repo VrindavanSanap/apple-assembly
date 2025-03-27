@@ -13,36 +13,34 @@
 // COMPILE  -->  make
 // RUN      -->  ./filename
 // ------------------------------------------------
-
-
 .global _main
 .align 2
 
 
 _main:
-                // READ IN FROM KEYBOARD
-MOV X16, 3          // Tell system we want to read from StdIn (#3)
-MOV X0, 0         // Focus on the keyboard (#0)
-MOV X2, 20          // Define length of string to read in
-ADRP  x1, msg@page    // Load the address of the message
-ADD x1, x1, msg@pageoff   // Store the address to x1
-SVC 0           // Call kernel to perform the action
+                          // read in from keyboard
+mov x16, 3                // tell system we want to read from stdin (#3)
+mov x0, 0                 // focus on the keyboard (#0)
+mov x2, 20                // define length of string to read in
+adrp  x1, msg@page        // load the address of the message
+add x1, x1, msg@pageoff   // store the address to x1
+svc 0                     // call kernel to perform the action
+bl _write
+bl _end
 
 _write:
-MOV X16, 4          // Tell system we want to write to StdOut (#4)
-MOV X0, 1         // Focus on the screen (#1)
-ADRP  x1, msg@page    // Load the address of the message
-ADD x1, x1, msg@pageoff   // Store the address to x1
-SVC 0           // Call kernel to perform the action
-
+mov x16, 4                // tell system we want to write to stdout (#4)
+mov x0, 1                 // focus on the screen (#1)
+adrp  x1, msg@page        // load the address of the message
+add x1, x1, msg@pageoff   // store the address to x1
+svc 0                     // call kernel to perform the action
+ret
 
 _end:
-MOV X0, 0         // Return 0 (get a run error without this)
-MOV X16, 1          // System call to terminate this program
-SVC 0           // Call kernel to perform the action
+mov x0, 0                 // return 0 (get a run error without this)
+mov x16, 1                // system call to terminate this program
+svc 0                     // call kernel to perform the action
 
 .data
 msg:
-.ds 20            // 20 bytes of memory for keyboard input
-
-
+.ds 20                    // 20 bytes of memory for keyboard input
