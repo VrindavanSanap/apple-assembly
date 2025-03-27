@@ -2,7 +2,7 @@
 .align 4
 
 _main:
-  mov x0, #29
-	add x0, x0, #26
+  mov x0, #20
+	add x0, x0, #22
   mov x16, #1
 	svc 0
