@@ -8,5 +8,5 @@ _main:
 	add x0, x0, #22
 	; set x16 to 1 (syscall number for exit)
   mov x16, #1
-	; make the system call happen hence exit the program
+	; supervisor  make the system call happen hence exit the program
 	svc 0
