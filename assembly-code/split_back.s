@@ -1,18 +1,4 @@
-// ------------------------------------------------
-// Porting Raspberry Pi ARM code to Apple Silicon
-// 2023-01-08
-// Jds
-// ------------------------------------------------
-// Read in from keyboard and print to the screen
-//
-// NOTE: This example uses system and kernel calls
-//       to read from the keyboard and write to
-//       the screen. It does not use printf or
-//       scanf (which are shown in other examples).
-//
-// COMPILE  -->  make
-// RUN      -->  ./filename
-// ------------------------------------------------
+
 .global _main
 .align 2
 
