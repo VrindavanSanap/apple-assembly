@@ -12,5 +12,5 @@ _main:
 
   // perform syscall, look at x16 to see
   // which sycall to perform 
-  svc #0x80
+  svc 0
 
