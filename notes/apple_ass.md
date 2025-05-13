@@ -1,6 +1,12 @@
 Sure! Here's a fully polished version of your text with clear structure, consistent terminology, and corrected grammar:
 
 ---
+CPU Registers
+
+Apple has made certain platform specific choices for the registers:
+
+Apple reserves X18 for its own use. Do not use this register.
+The frame pointer register (FP, X29) must always address a valid frame record.
 
 ## Apple Assembly
 
