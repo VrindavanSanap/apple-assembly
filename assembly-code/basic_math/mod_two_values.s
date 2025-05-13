@@ -6,7 +6,7 @@ _main:
 	mov x0, #10
 
 	; Move 3 to the x1 register
-	mov x1, #3
+	mov x1, #4
 
 	; Unsigned divide x0 register by x1 register and store the result in x2 register
 	udiv x2, x0, x1  ; (x0 / x1 = x2 is quotient)
