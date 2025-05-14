@@ -14,7 +14,7 @@ _loop:
 
 _continue_loop:
 	cmp x0, 9         // Does X0 = 9?
-	B.LE	_loop				// If <=, the loop
+	B.LE	_loop				// If <=, then loop
 
 
 _end:
