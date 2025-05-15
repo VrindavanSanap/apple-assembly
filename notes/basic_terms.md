@@ -1,9 +1,9 @@
 # Basic arm64 Terms
 
+- **[Instruction Set Architecture (ISA)](https://www.arm.com/glossary/isa)** — The set of instructions that a processor can execute.
 
-**Interface** - Shared boundary across which two or more separate components of a computer system exchange information.
+- **Interface** — A shared boundary across which two or more separate components of a computer system exchange information.
 
-**[ABI](https://en.wikipedia.org/wiki/Application_binary_interface)** - Application binary interface (ABI) is an interface between two binary program modules.
+- **[ABI (Application Binary Interface)](https://en.wikipedia.org/wiki/Application_binary_interface)** — An interface between two binary program modules.
 
-**Exit code** are like a program's way of telling the operating system how things went after it finished running. (values 0-255)
-k
+- **Exit code** — A program's way of telling the operating system how things went after it finished running (values 0–255).
