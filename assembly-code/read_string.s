@@ -12,7 +12,7 @@ buffer: .ds 100 // Allocate space for the string
 _main:
 	mov x16, 3                // tell system we want to read from stdin (#3)
 	mov x0, 0                 // focus on the keyboard (#0)
-	mov x2, 20                // define length of string to read in
+	mov x2, 100                // define length of string to read in
 	adrp  x1, buffer@page        // load the address of the message
 	add x1, x1, buffer@pageoff   // store the address to x1
 	svc #0x80              // invoke syscall to read string     
