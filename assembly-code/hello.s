@@ -7,8 +7,7 @@ _main:
   mov X0, #1                          
 
   // Exact address of string 
-  adrp X1, helloworld.str@PAGE        
-  add X1, X1, helloworld.str@PAGEOFF  
+  adr X1, helloworld
 
   mov X2, #13       // length of our string
   mov X16, #4       // Unix write system call
@@ -18,5 +17,5 @@ _main:
   mov     X16, #1
   svc     #0x80   
 
-helloworld.str: .asciz "Hello World!\n"
+helloworld: .asciz "Hello World!\n"
 
