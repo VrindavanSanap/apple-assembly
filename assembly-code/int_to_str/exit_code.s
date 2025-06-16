@@ -1,9 +1,27 @@
+//
+//  exit_code.s
+//  MyApp
+//
+//  Created by Vrindavan Sanap on 16/06/25.
+//
+// This file defines a function that exits the program 
+// with a specific exit code.
+
+
+
+
+
+
+
+
+
 .global _main
 .balign 4
-_main:
 
-  // what is our exit code
-  mov x0, #7  // move '7' into 32 bit register 
+
+_exit:
+  // arguments 
+  // x0 is the exit code
 
   // move '1' into 32 bit register-read by 0S
   // which syscall to perform 

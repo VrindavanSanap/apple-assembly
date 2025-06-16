@@ -54,5 +54,4 @@ _loop:
 
 	// Exit program
 	mov     x0, x3                   // x0 is the exit code (number of characters read)
-	mov     x16, #1                  // 1 is the syscall number for exit on macOS
-	svc     #0x80                    // Invoke syscall for exit
+	bl _exit 								// Call exit function
