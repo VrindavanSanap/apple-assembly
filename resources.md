@@ -1,3 +1,3 @@
-https://eclecticlight.co/2021/06/16/code-in-arm-assembly-registers-explained/
-https://developer.arm.com/documentation/100076/0200/?lang=en
-https://github.com/pkivolowitz/asm_book/tree/main
+- [Code in ARM Assembly: Registers Explained](https://eclecticlight.co/2021/06/16/code-in-arm-assembly-registers-explained/)
+- [ARM Developer Documentation: ARMv8-A Architecture Reference Manual](https://developer.arm.com/documentation/100076/0200/?lang=en)
+- [Practical Reverse Engineering: Assembly Book GitHub Repository](https://github.com/pkivolowitz/asm_book/tree/main)

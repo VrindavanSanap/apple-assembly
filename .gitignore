@@ -1,2 +1,23 @@
+# Object files
 *.o
+
+# Executable files
 *.x
+*.out
+*.exe
+
+# Backup and temporary files
+*~
+*.swp
+*.bak
+
+# macOS system files
+.DS_Store
+
+# Assembly listing and debug files
+*.lst
+*.map
+*.sym
+
+# Core dumps
+core
