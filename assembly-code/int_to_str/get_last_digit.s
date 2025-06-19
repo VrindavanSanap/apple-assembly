@@ -1,9 +1,11 @@
 .section	__TEXT,__text,regular,pure_instructions
-.global _main	
+.global _get_last_digit
 
-_main:
-// goal is to get the last digit of a number in x0
-mov x0, #123 
-
-
-ret
+_get_last_digit:
+	// args
+	// x0 is the number whose last digit we want to get
+	// returns
+	// x0 is the last digit of the number
+	mov x1, #10 // divisor
+	bl _mod_two_val
+	ret

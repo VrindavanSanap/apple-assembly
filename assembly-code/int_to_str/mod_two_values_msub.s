@@ -1,16 +1,18 @@
-.global _main
+.global _mod_two_val
 .align 4
 
 	; Dividend = (Divisor × Quotient) + Remainder
 	; Remainder = Dividend - (Divisor × Quotient)
-_main: 
+_mod_two_val: 
+	; args 
+	; x0 is the dividend (number to be divided)
+	; x1 is the divisor (number to divide by)
+
+	; returns 
+	; x0 is the remainder of the division
+
 	; Move 10 to the x0 register
 	; x0 is our dividend(number to be divided)
-	
-	mov x0, #10
-	; Move 3 to the x1 register
-	; x1 is our divisor (number to divide by)	
-	mov x1, #4
 
 	; We want to calculate the remainder of x0 register divided by x1 register
 
@@ -38,9 +40,4 @@ _main:
 
 	; Move the result to x0 register to return it
 	mov x0, x3
-
-	; Set x16 to 1 (syscall number for exit)
-	mov x16, #1
-
-	; Supervisor call to make the system call happen and exit the program
-	svc 0
+	ret
