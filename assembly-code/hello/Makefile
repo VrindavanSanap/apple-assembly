@@ -1,0 +1,30 @@
+SDK_PATH := /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk
+
+
+read_write := /Users/vrindavan/Code/languages/assembly/apple-assembly/assembly-code/utils/read_write_stdin.s
+
+all: hello.x hello_5.x hello_n.x
+
+hello.x: hello.o
+	ld -o hello.x hello.o   -lSystem -syslibroot $(SDK_PATH)
+
+hello_5.x: hello_5.o read_write_stdin.o
+	ld -o hello_5.x hello_5.o read_write_stdin.o -lSystem -syslibroot $(SDK_PATH)
+
+hello_n.x: hello_n.o read_write_stdin.o
+	ld -o hello_n.x hello_n.o read_write_stdin.o -lSystem -syslibroot $(SDK_PATH)
+
+
+
+
+read_write_stdin.o:
+	as $(read_write) -o read_write_stdin.o
+
+hello.o: hello.s
+	as hello.s -o hello.o
+
+hello_5.o: hello_5.s
+	as hello_5.s -o hello_5.o
+
+hello_n.o: hello_n.s
+	as hello_n.s -o hello_n.o

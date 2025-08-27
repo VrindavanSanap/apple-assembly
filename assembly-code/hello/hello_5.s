@@ -3,16 +3,14 @@
 
 // Print "Hello World!" 5 times
 _hello:
-  adrp    X1, helloworld.str@PAGE       // Load string address (page)
-  add     X1, X1, helloworld.str@PAGEOFF // Load string address (offset)
-  mov     X0, #1                        // 1 = StdOut
-  mov     X2, #13                       // Length of the string
-  mov     X16, #4                       // Unix write system call
-  svc     #0x80                         // Make system call
+  adrp    x0, helloworld.str@PAGE       // Load string address (page)
+  add     x0, x0, helloworld.str@PAGEOFF // Load string address (offset)
+  mov     x1, 13
+  bl _write_stdout 
+
   add     X5, X5, 1                     // Increment counter
   cmp     X5, 5                         // Compare counter with 5
-  bne     _hello                        // Loop if not equal
-  b       _exit                         // Exit if done
+  bne     _hello                        // Loop if not equal  
 
 _exit:
   mov     X0, #0                        // Exit code 0
