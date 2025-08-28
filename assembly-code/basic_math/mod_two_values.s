@@ -1,7 +1,7 @@
 .global _main
 .align 4
 
-mod_two_val: 
+_main: 
 	; Move 10 to the x0 register
 	mov x0, #10
 
