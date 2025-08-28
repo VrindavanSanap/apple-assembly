@@ -20,4 +20,4 @@
 *.sym
 
 # Core dumps
-core
+core\n# Compiled object and executable files\n*.o\n*.x
