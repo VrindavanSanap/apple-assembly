@@ -1,6 +1,14 @@
 # ARM64 Registers Overview
 
+
+AArch64 Provides 32 integer registers x0-x31
+
+PC -> Program Counter (keeps track of which instruction is being executed)
+SP -> Stack Pointer (points to dynamic memory available during program execution)
+FP -> Frame Pointer (points to the current function's stack frame)
+
 ## System Call Number Register
+
 
 In ARM64, **`x16`** is designated as the **system call number register**. This convention is defined by the ARM64 ABI (Application Binary Interface), which specifies how system calls are managed in user-space applications.
 

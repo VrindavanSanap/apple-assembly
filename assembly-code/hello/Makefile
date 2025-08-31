@@ -3,7 +3,7 @@ SDK_PATH := /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform
 
 read_write := /Users/vrindavan/Code/languages/assembly/apple-assembly/assembly-code/utils/read_write_stdin.s
 
-all: hello.x hello_5.x hello_n.x
+all: hello.x hello_5.x hello_n.x hellloo.x
 
 hello.x: hello.o
 	ld -o hello.x hello.o   -lSystem -syslibroot $(SDK_PATH)
@@ -13,6 +13,9 @@ hello_5.x: hello_5.o read_write_stdin.o
 
 hello_n.x: hello_n.o read_write_stdin.o
 	ld -o hello_n.x hello_n.o read_write_stdin.o -lSystem -syslibroot $(SDK_PATH)
+
+hellloo.x: hellloo.o
+	ld -o hellloo.x hellloo.o -lSystem -syslibroot $(SDK_PATH)
 
 
 
@@ -28,3 +31,9 @@ hello_5.o: hello_5.s
 
 hello_n.o: hello_n.s
 	as hello_n.s -o hello_n.o
+
+hellloo.o: hellloo.s
+	as hellloo.s -o hellloo.o
+
+clean:
+	rm -f *.o *.x

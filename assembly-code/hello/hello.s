@@ -1,21 +1,17 @@
-.global _main // Provide program starting address to linker
-.align 4      // Make sure everything is aligned properly
 
-_main: 
+.global _main
+.align 4
 
-  // fd for stdout
-  mov X0, #1                          
+_main:
+    mov x0, #1
+    adr x1, helloworld
+    mov x2, len 
+    mov x16, #4
+    svc #0x80
 
-  // Exact address of string 
-  adr X1, helloworld
+    mov x0, #0
+    mov x16, #1
+    svc #0x80
 
-  mov X2, #13       // length of our string
-  mov X16, #4       // Unix write system call
-  svc #0x80         // Call kernel to output the string
-
-  mov     X0,  #1
-  mov     X16, #1
-  svc     #0x80   
-
-helloworld: .asciz "Hello World!\n"
-
+helloworld: .ascii "Hello World!\n"
+.equ len, . - helloworld

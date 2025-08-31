@@ -13,7 +13,7 @@ OBJECTS = $(ASM_SOURCES:.s=.o)
 EXECUTABLES = $(ASM_SOURCES:.s=.x)
 
 # Default target
-all: $(EXECUTABLES)
+all: $(EXECUTABLES) $(OBJECTS)
 
 # Pattern rule for object files
 %.o: %.s
@@ -25,6 +25,6 @@ all: $(EXECUTABLES)
 
 # Clean target
 clean:
-	rm -f $(OBJECTS) $(EXECUTABLES)
+	rm -f $(EXECUTABLES) $(OBJECTS)
 
 .PHONY: all clean
