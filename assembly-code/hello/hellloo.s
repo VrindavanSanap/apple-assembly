@@ -4,7 +4,7 @@
 
 
 _main:
-    mov x2, #0
+    mov x2, #2
     mov x3, len
 loop:
     cmp x2, x3 
