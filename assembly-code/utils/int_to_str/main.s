@@ -15,7 +15,7 @@ _get_len:
 
 _main:
 
-	mov x0, #123
+	mov x0, #12345
 	// goal is to move int in x0 in its string 
 	// representation in to the buffer so we can write 
 	// it in stdout

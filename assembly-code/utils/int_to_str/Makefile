@@ -25,3 +25,6 @@ get_last_digit.o:
 
 mod_two_values_msub.o:
 	as $(mod_two_val) -o mod_two_values_msub.o
+
+clean:
+	rm -f *.o *.x
