@@ -29,6 +29,7 @@ _loop:
 
   // while n != 0
   cmp x0, 0
+  add x24, x24, #1
   beq _exitt
 	mov x1, #10
 	bl _mod_two_val
@@ -43,7 +44,7 @@ _loop:
    
 _exitt:    
   mov x0, x23
-  mov x1, 6
+  mov x1, x24
   bl _reverse_string
   bl  _write_stdout
 
