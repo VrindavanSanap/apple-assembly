@@ -10,10 +10,10 @@ _main:
 	; Unsigned divide x0 register by x1 register and store the result in x2 register
 	udiv x2, x0, x1  ; (x0 / x1 = x2 is quotient)
 	; Multiply x2 by x1 and store the result in x3
-	mul x3, x2, x1   ; (x2 * x1 = x3 is product)
 	; Subtract x3 from x0 and store the result in x4 (remainder)
-	sub x4, x0, x3   ; (x4 = x0 - x3 is remainder)
 
+
+	msub x4, x1, x2, x0
 	mov x0, x4	
 	; Set x16 to 1 (syscall number for exit)
 	mov x16, #1
