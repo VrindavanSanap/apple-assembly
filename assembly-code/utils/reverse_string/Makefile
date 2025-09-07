@@ -16,3 +16,6 @@ reverse_string.o: reverse_string.s
 
 read_write_stdin.o:
 	as $(read_write) -o read_write_stdin.o
+
+clean:
+	rm -f *.o *.x

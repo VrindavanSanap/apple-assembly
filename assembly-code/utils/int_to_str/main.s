@@ -6,26 +6,46 @@ buffer: .ds 100  // Allocate space for the string
 .text
 .align 4
 
-_get_len:
-	// return the length of a integer
-	// inputs:
-	// x0: given integer
-	// outputs:
-	// x0: number of digits in x0 
-
 _main:
 
-	mov x0, #12345
-	// goal is to move int in x0 in its string 
-	// representation in to the buffer so we can write 
-	// it in stdout
-	adrp    x1, buffer@page          
-	add     x1, x1, buffer@pageoff   	
+	adrp    x23, buffer@page          
+	add     x23, x23, buffer@pageoff   	
 
 
-//	mov x0, x1
-//	mov x1, #2
-//	bl _write_stdout
-	mov x0, #3
+  // our goal is to sum the digits in x0 and store them in x0
+	// expected answer is 15
+	mov x0, #42069
+  mov x20, #0
+  mov x21, #10
+  mov x24, #0
+
+  // registers x19-x28 are calle saved hence can be used to store
+  // stuff before calling a function.
+  mov x19, x0
+_loop:
+  // n = x19
+
+  mov x0, x19
+
+  // while n != 0
+  cmp x0, 0
+  beq _exitt
+	mov x1, #10
+	bl _mod_two_val
+  // res = x20
+  // res += n%10
+  add x20, x0 ,#48
+  strb w20, [x23, x24]
+  add x24, x24, #1
+  // n = n /10
+  udiv x19, x19, x21
+  bl _loop
+   
+_exitt:    
+  mov x0, x23
+  mov x1, 6
+  bl _reverse_string
+  bl  _write_stdout
+
+  mov x0, x20
 	bl _exit
-	
