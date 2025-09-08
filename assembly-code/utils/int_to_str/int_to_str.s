@@ -44,5 +44,4 @@ _exitt:
   bl _reverse_string
   bl  _write_stdout
   mov x0, x20
-
 	bl _exit
