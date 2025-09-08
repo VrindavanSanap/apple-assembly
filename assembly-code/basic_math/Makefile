@@ -2,7 +2,7 @@
 AS = as
 LD = ld
 # macOS SDK paths
-SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX15.5.sdk
+SDKROOT := $(shell xcrun --sdk macosx --show-sdk-path)
 
 CFLAGS = -I$(SDKROOT)/usr/include
 LDFLAGS = -L$(SDKROOT)/usr/lib

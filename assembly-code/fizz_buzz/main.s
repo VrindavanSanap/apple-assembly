@@ -23,9 +23,28 @@
 .global _main // Provide program starting address to linker
 .align 4      // Make sure everything is aligned properly.
 .data 
-buffer: .ds 100 // Allocate space for the string
 
 .text
 .align 4
 
 _main:
+    
+    adr x0, fizz 
+    mov x1, fizz_len 
+    bl _write_stdout
+  
+    adr x0, buzz 
+    mov x1,buzz_len
+    bl _write_stdout
+
+
+    bl _exit
+
+fizz: .ascii "Fizz\n"
+.equ fizz_len, . - fizz
+buzz: .ascii "Buzz\n"
+.equ buzz_len, . - buzz
+fizz_buzz: .ascii "FizzBuzz\n"
+.equ fizz_buzz_len, . - fizz_buzz
+
+
