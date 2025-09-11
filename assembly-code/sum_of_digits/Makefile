@@ -1,6 +1,6 @@
 SDK_PATH := $(shell xcrun --sdk macosx --show-sdk-path)
 
-mod_two_values := $(CURDIR)/mod_two_values.s
+mod_two_values := /Users/vrindavan/Code/languages/assembly/apple-assembly/assembly-code/utils/mod_two_values.s
 
 all: main.x
 
