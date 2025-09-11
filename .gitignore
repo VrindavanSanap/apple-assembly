@@ -20,4 +20,52 @@
 *.sym
 
 # Core dumps
-core\n# Compiled object and executable files\n*.o\n*.x
+core
+
+# CMake
+#
+# General build output directories
+build/
+[Bb]uild/
+[Dd]ebug/
+[Rr]elease/
+cmake-build-*/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake.in
+
+# Xcode
+#
+# Build products and derived data
+build/
+DerivedData/
+
+# Xcode project files
+*.xcodeproj/project.xcworkspace
+*.xcodeproj/xcuserdata
+*.xcworkspace
+!*.xcworkspace/contents.xcworkspacedata
+
+# Swift Package Manager
+.build/
+.swiftpm/
+
+# Other Xcode files
+*.hmap
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+# Property Lists
+#
+# Ignore user-specific or generated plist files.
+# Be careful not to ignore your main Info.plist.
+# If you need to track it, use `!Info.plist`
+*.plist
+*.pbxproj
+*.make
+*.xcscheme

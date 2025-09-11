@@ -6,10 +6,9 @@
 
 
 _main:
-  mov x0, #42063
-  bl _int_to_str
-  mov x0, #12345
-  bl _int_to_str
-
-
-  bl _exit
+   mov x0, #4206
+   bl _int_to_str
+mov x0, #68
+bl _int_to_str
+    mov x0, #0
+    bl _exit

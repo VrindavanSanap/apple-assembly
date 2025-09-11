@@ -7,28 +7,28 @@ buffer: .ds 100  // Allocate space for the string
 .align 4
 
 _int_to_str:
-	adrp    x23, buffer@page          
+	// given
+	// arg0: x0 (given integer which we have to covert to string)
+	stp     x29, x30, [sp, #-16]!
+	adrp    x23, buffer@page
 	add     x23, x23, buffer@pageoff   	
-
   // our goal is to sum the digits in x0 and store them in x0
 	// expected answer is 15
   mov x20, #0
   mov x21, #10
   mov x24, #0
-
   // registers x19-x28 are calle saved hence can be used to store
   // stuff before calling a function.
   mov x19, x0
+
 _loop:
   // n = x19
-
   mov x0, x19
   // while n != 0
   cmp x0, 0
-  add x24, x24, #1
   beq _exitt
 	mov x1, #10
-	bl _mod_two_val
+	bl _mod_two_values
   // res = x20
   // res += n%10
   add x20, x0 ,#48
@@ -36,12 +36,14 @@ _loop:
   add x24, x24, #1
   // n = n /10
   udiv x19, x19, x21
-  bl _loop
+  b _loop
    
 _exitt:    
   mov x0, x23
+	add x24, x24, #1
   mov x1, x24
   bl _reverse_string
-  bl  _write_stdout
+  bl _write_stdout
   mov x0, x20
-	bl _exit
+	ldp     x29, x30, [sp], #16
+	ret
