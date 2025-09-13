@@ -9,11 +9,15 @@ buffer: .ds 100  // Allocate space for the string
 _int_to_str:
 	// given
 	// arg0: x0 (given integer which we have to covert to string)
+	// arg1: x1 (buffer where we want to store the resulting string)
+
+	// output
+	// arg0: x0 (result buffer)
+	// arg1: x1 (length of result buffer)
+
 	stp     x29, x30, [sp, #-16]!
 	adrp    x23, buffer@page
 	add     x23, x23, buffer@pageoff   	
-  // our goal is to sum the digits in x0 and store them in x0
-	// expected answer is 15
   mov x20, #0
   mov x21, #10
   mov x24, #0
@@ -39,11 +43,12 @@ _loop:
   b _loop
    
 _exitt:    
-  mov x0, x23
+	mov w20, #10
+	strb w20, [x23, x24]
 	add x24, x24, #1
+	mov x0, x23
   mov x1, x24
   bl _reverse_string
   bl _write_stdout
-  mov x0, x20
-	ldp     x29, x30, [sp], #16
+	ldp x29, x30, [sp], #16
 	ret

@@ -6,9 +6,9 @@
 
 
 _main:
-   mov x0, #4206
-   bl _int_to_str
-mov x0, #68
-bl _int_to_str
-    mov x0, #0
-    bl _exit
+	mov x0, #68
+	bl _int_to_str
+	mov x0, #69
+	bl _int_to_str
+	mov x0, #0
+	bl _exit
