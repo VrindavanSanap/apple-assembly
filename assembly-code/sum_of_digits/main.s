@@ -12,7 +12,7 @@ _main:
 
 	// our goal is to sum the digits in x0 and store them in x0
 	// expected answer is 15
-	mov x0, #12348
+	mov x0, #12345
   mov x20, #0
   mov x21, #10
 
