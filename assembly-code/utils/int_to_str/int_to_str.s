@@ -49,6 +49,5 @@ _exitt:
 	mov x0, x23
   mov x1, x24
   bl _reverse_string
-  bl _write_stdout
 	ldp x29, x30, [sp], #16
 	ret
