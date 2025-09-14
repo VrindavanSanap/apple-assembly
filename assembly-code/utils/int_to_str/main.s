@@ -6,7 +6,7 @@
 
 
 _main:
-	mov x0, #69
+	mov x0, #1
 	bl _int_to_str
   bl _write_stdout
 	bl _exit
