@@ -20,11 +20,11 @@ _write_stdout:
 	// args
 	// x0 is the location of buffer 
 	// x1 is the length of the buffer
-	mov x16, #4                  // 4 is the syscall number for read on macOS
+	mov x16, #4                  // 4 is the syscall number for write on macOS
 	mov x2, x1
 	mov x1, x0 // move the buffer to the buffer arg
-	mov x0, 0 // fd for stdin
-	svc #0x80                    // Invoke syscall to read string
+	mov x0, 1 // fd for stdout
+	svc #0x80                    // Invoke syscall to write string
 	ret
 
 
