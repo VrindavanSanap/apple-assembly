@@ -16,7 +16,7 @@ _main:
   mov x20, #0
   mov x21, #10
 
-  // registers x19-x28 are calle saved hence can be used to store
+  // registers x19-x28 are callee-saved hence can be used to store
   // stuff before calling a function.
   mov x19, x0
 _loop:

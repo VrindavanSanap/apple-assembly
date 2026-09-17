@@ -8,7 +8,7 @@ _int_to_char:
 	// inputs
 	// x0 = given int
 	// outputs 
-	// x0 = ascci code of the given int
+	// x0 = ASCII code of the given int
 	add x0, x0, #48
 
 	ret 

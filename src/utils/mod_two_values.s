@@ -6,8 +6,8 @@
 
 _mod_two_values: 
 	// inputs
-	// x0 = number to be moded 
-	// x1 = number to be moded by 
+	// x0 = number to be modded 
+	// x1 = number to be modded by 
 	// outputs 
 	// x0 = x0 % x1
 

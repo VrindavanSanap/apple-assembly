@@ -23,7 +23,7 @@ funcs`main:
 
     0x100003f74 <+12>: bl     0x100003f4c               ; fun2
                        store the address of the next instruction   
-                       ie 0x100003f74 in the link register and  
+                       ie 0x100003f78 in the link register and  
                        branch to 0x100003f4c               
 
     0x100003f78 <+16>: mov    w0, #0x0

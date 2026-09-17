@@ -39,7 +39,7 @@ This distinguishes it from a register or memory address.
 
 ```asm
 mov x0, #5   // Move the constant value 5 into register x0
-````
+```
 
 ---
 

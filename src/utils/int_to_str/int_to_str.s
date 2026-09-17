@@ -8,7 +8,7 @@ buffer: .ds 100  // Allocate space for the string
 
 _int_to_str:
 	// given
-	// arg0: x0 (given integer which we have to covert to string)
+	// arg0: x0 (given integer which we have to convert to string)
 	// arg1: x1 (buffer where we want to store the resulting string)
 
 	// output
@@ -21,7 +21,7 @@ _int_to_str:
   mov x20, #0
   mov x21, #10
   mov x24, #0
-  // registers x19-x28 are calle saved hence can be used to store
+  // registers x19-x28 are callee-saved hence can be used to store
   // stuff before calling a function.
   mov x19, x0
 

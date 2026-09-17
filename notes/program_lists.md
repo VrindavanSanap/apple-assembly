@@ -1,4 +1,4 @@
-[exit code](assembly-code/exit_code.s)- Perfrom the exit syscall and write the given exit code
+[exit code](assembly-code/exit_code.s)- Perform the exit syscall and write the given exit code
 
 [Add two values](assembly-code/add_two_values.s)- Adds two values and returns the sum in exit code (between 0-255) 
 

@@ -15,4 +15,4 @@ Disassembly of section __TEXT,__text:
       20: d2800200     	mov	x0, #16
       24: d2800400     	mov	x0, #32
 
-Value is store in the instruction
+Value is stored in the instruction

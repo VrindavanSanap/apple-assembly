@@ -1,4 +1,4 @@
-wzr  = widend zero register (32 bit zero register)
+wzr  = widened zero register (32 bit zero register)
 fp = frame pointer(x29)
 lr = link register(x30)
 sp = stack pointer(x31) 

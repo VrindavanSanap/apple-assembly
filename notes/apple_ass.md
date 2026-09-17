@@ -1,6 +1,3 @@
-Sure! Here's a fully polished version of your text with clear structure, consistent terminology, and corrected grammar:
-
----
 CPU Registers
 
 Apple has made certain platform specific choices for the registers:

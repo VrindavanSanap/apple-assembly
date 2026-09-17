@@ -1,5 +1,5 @@
 # Teaching Myself Apple Silicon Assembly
-## How to compile and execute a assembly file in macos (apple-silicon)
+## How to compile and execute an assembly file in macOS (Apple Silicon)
 
 
 ## References
