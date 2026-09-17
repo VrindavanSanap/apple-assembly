@@ -69,3 +69,6 @@ DerivedData/
 *.pbxproj
 *.make
 *.xcscheme
+
+# VS Code
+.vscode/
