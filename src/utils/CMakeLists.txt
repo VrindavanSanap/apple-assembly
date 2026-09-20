@@ -1,0 +1,1 @@
+add_library(utils read_write_stdin.s)
