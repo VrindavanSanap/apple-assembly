@@ -1,1 +1,1 @@
-add_library(utils read_write_stdin.s)
+add_library(utils read_write_stdin.s int_to_char.s uitoa.s)
