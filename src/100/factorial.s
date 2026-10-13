@@ -29,12 +29,10 @@ _factorial:
 	mov     x29, sp
 
 	// if n == 0: return 1
-	cmp     x0, #0  ;
-	b.eq    _exit
-
 	// else if n == 1: return 1
-	cmp     x0, #1  ;
-	b.eq    _exit
+	cmp     x0, #0  ;
+	b.ls _base_case
+
 
 	str     x0, [sp, #16]
 	sub     x0, x0, #1
@@ -47,7 +45,7 @@ _factorial:
 	ldp     x29, x30, [sp], #64
 	ret
 
-_exit:
+_base_case:
 	mov     x0, #1
 	ldp     x29, x30, [sp], #64
 	ret
