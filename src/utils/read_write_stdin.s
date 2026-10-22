@@ -1,6 +1,7 @@
 .global _read_stdin
 .global _write_stdout
 .global _newline
+.global _space
 .balign 4
 
 _read_stdin:
@@ -30,6 +31,24 @@ _newline:
 	sub     sp, sp, #16
 
 	mov     x0, #10
+	strb    w0, [sp, #0]
+
+	mov     x16, #4  // 4 is the syscall number for write on macOS
+
+	mov     x2, #1  //length
+	mov     x1, sp  // move the buffer to the buffer arg
+	mov     x0, 1   // fd for stdout
+	svc     #0x80   // Invoke syscall to write string
+
+	add     sp, sp, #16
+
+	ret
+
+_space:
+	// args
+	sub     sp, sp, #16
+
+	mov     x0, #32
 	strb    w0, [sp, #0]
 
 	mov     x16, #4  // 4 is the syscall number for write on macOS
