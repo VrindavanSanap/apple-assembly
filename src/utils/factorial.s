@@ -19,7 +19,7 @@ _factorial:
 	// if n == 0: return 1
 	// else if n == 1: return 1
 	cmp     x0, #0  ;
-	b.ls    _base_case
+	b.ls    Lfactorial_exit
 
 	str     x0, [sp, #16]
 	sub     x0, x0, #1
@@ -32,7 +32,7 @@ _factorial:
 	ldp     x29, x30, [sp], #64
 	ret
 
-_base_case:
+Lfactorial_exit:
 	mov     x0, #1
 	ldp     x29, x30, [sp], #64
 	ret

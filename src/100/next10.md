@@ -3,7 +3,7 @@ NEXT 10
 - [x] fib.s: prints the first 10 Fibonacci numbers
 - [x] sum_squares.s: inputs n: x0; returns the sum 1² + 2² + … + n² in x0, using the closed form n(n+1)(2n+1)/6
 - [x] is_prime.s: tells if x0 is prime or not
-- [ ] pascal.s: prints the first 6 rows of Pascal's triangle
+- [x] pascal.s: prints the first 6 rows of Pascal's triangle
 - [x] primes.s: prints all the primes between 1 and 100
 - [ ] euler_phi.s: implements the Euler phi function
 - [ ] goldbach.s: returns two primes in x0, x1 such that their sum is equal to the input x0

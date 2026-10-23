@@ -12,15 +12,15 @@ _main:
 	str     x20, [sp, 16]
 	mov     x20, #0
 
-_rows:
+Lmain_loop:
 	cmp     x20, #6
-	b.eq    _main_done
+	b.eq    Lmain_exit
 	mov     x0, x20
 	bl      _pascal_row
 	add     x20, x20, #1
-	b       _rows
+	b       Lmain_loop
 
-_main_done:
+Lmain_exit:
 	ldr     x20, [sp, 16]
 	ldp     x29, x30, [sp], #32
 	mov     x0, #0
@@ -40,9 +40,9 @@ _pascal_row:
 	mov     x20, #0
 	mov     x21, x0
 
-_loop:
+Lpascal_row_loop:
 	cmp     x20, x21
-	b.gt    _done
+	b.gt    Lpascal_exit
 	mov     x0, x21
 	mov     x1, x20
 	bl      _comb
@@ -50,9 +50,9 @@ _loop:
 	bl      _write_stdout
 	bl      _space
 	add     x20, x20, #1
-	b       _loop
+	b       Lpascal_row_loop
 
-_done:
+Lpascal_exit:
 	bl      _newline
 	ldr     x20, [sp, #16]
 	ldr     x21, [sp, #24]

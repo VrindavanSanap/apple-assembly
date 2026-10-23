@@ -20,7 +20,7 @@ _uitoa:
 	mov     x5, #20
 	mov     x4, x0
 
-_loop:
+Luitoa_loop:
 	//  x2 = x0 % x3(10)
 
 	sub     x5, x5, #1
@@ -36,7 +36,7 @@ _loop:
 	strb    w0, [x1, x5]
 
 
-	cbnz    x4, _loop
+	cbnz    x4, Luitoa_loop
 
 	// x0 should be buffer +  (20 - n)
 	add     x0, x1, x5
