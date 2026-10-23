@@ -2,7 +2,7 @@
 // created by Vrindavan Sanap
 // Prints the numbers (0-9) to stdout
 
-.global _main    
+.global _main
 
 .text
 .align 4
@@ -10,7 +10,7 @@
 _main:
 	stp     x29, x30, [sp, #-32]!
 	mov     x29, sp
-	str     x20,  [sp, #24]
+	str     x20, [sp, #24]
 	mov     x20, #0
 
 _loop:
@@ -18,16 +18,10 @@ _loop:
 	beq     _exit
 	mov     x0, x20
 
-	bl      _int_to_char
-	strb    w0, [sp, #16]
-
-	mov     x0, #10
-	strb    w0, [sp, #17]
-
-	add     x0, sp, #16
-	mov     x1, #2
-
+	bl      _uitoa
 	bl      _write_stdout
+	bl      _newline
+
 	add     x20, x20, #1
 	b       _loop
 

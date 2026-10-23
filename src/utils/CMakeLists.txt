@@ -1,1 +1,3 @@
-add_library(utils read_write_stdin.s int_to_char.s uitoa.s)
+file(GLOB PROGRAM_SOURCES CONFIGURE_DEPENDS "${CMAKE_CURRENT_SOURCE_DIR}/*.s")
+
+add_library(utils ${PROGRAM_SOURCES})
