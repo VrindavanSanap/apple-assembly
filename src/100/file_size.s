@@ -45,7 +45,7 @@ Lmain_exit:
 
 .section __TEXT, __cstring
 file_name:
-.asciz "bee.txt"
+.asciz "file.txt"
 failed_msg:
 .asciz "Reading file failed!\n"
 .equ failed_msg_len, . - failed_msg - 1
