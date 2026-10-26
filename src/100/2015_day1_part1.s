@@ -1,6 +1,6 @@
-// day1.s
+// 2015_day1_part1.s
 // created by Vrindavan Sanap
-//  solves advent of code 2015 day1 part1
+// solves advent of code 2015 day1 part1
 // https://adventofcode.com/2015/day/1
 
 .global _main
