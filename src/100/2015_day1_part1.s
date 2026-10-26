@@ -57,7 +57,7 @@ Lmain_exit:
 
 .section __TEXT, __cstring
 file_name:
-.asciz "2015_day1_part1.txt"
+.asciz "day1.txt"
 
 failed_msg:
 .asciz "Reading file failed!\n"
